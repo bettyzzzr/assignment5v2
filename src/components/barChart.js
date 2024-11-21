@@ -1,7 +1,7 @@
 import React, { useEffect, useRef } from "react";
 import * as d3 from "d3";
-import YAxis from "./axes";
-import XAxis from "./axes";
+import { XAxis, YAxis } from './axes';
+
 
 export function BarChart(props) {
     const {
