@@ -8,9 +8,32 @@ export { XAxis, YAxis };
 // For the tick text, we set style={{textAnchor: 'start', fontSize:'10px'}}, x={-offsetX+10},y={yScale.bandwidth()/2}
 function YAxis (props) {
     const { yScale, height, offsetX } = props;
-    return <g>
-        
-    </g>
+    return  (
+        <g transform={`translate(${offsetX}, 0)`}>
+            {/* Draw the y-axis line */}
+            <line x1={0} x2={0} y2={height} stroke="black" />
+
+            {/* Draw the ticks */}
+            {yScale.domain().map((tickValue) => (
+                <g
+                    key={tickValue}
+                    transform={`translate(0, ${yScale(tickValue) + yScale.bandwidth() / 2})`}
+                >
+                    {/* Tick line */}
+                    <line x1={-5} x2={0} stroke="black" />
+                    {/* Tick text */}
+                    <text
+                        style={{ textAnchor: "end", fontSize: "10px" }}
+                        x={-10}
+                        y={0}
+                        dy="0.32em" // Align text vertically
+                    >
+                        {tickValue}
+                    </text>
+                </g>
+            ))}
+        </g>
+    );
 }
 
 function XAxis(props) {
