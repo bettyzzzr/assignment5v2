@@ -7,7 +7,7 @@ import { groupByAirline, groupByAirport } from "../components/utils.js";
 import { AirportMap }  from "../components/airportMap.js";
 import { BarChart } from "../components/barChart.js";
 
-import styles from '..styles/assignment5_styles.module.css';
+import styles from '../styles/assignment5_styles.module.css';
 
 
 const csvUrl = 'https://gist.githubusercontent.com/hogwild/9367e694e12bd2616205e4b3e91285d5/raw/9b451dd6bcc148c3553f550c92096a1a58e1e1e5/airline-routes.csv';
