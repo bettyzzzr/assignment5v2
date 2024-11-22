@@ -57,7 +57,7 @@ export function BarChart(props) {
             .on("mouseover", (event, d) => onMouseOver(d.airlineID)) // 鼠标悬停事件
             .on("mouseout", onMouseOut) // 鼠标移出事件
             .attr("cursor", "pointer");
-    }, [data, xScale, yScale, offsetX, selectedAirlineID]);
+    }, [data, xScale, yScale, offsetX, selectedAirlineID,color, onMouseOver, onMouseOut]);
 
     return (
         <svg ref={svgRef} width={width} height={height} id="barchart">
