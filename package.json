@@ -1,5 +1,5 @@
 {
-  "name": "assignment5v2",
+  "name": "assignment5_zirui",
   "version": "0.1.0",
   "private": true,
   "scripts": {
@@ -11,13 +11,9 @@
   "dependencies": {
     "bootstrap": "^5.3.3",
     "d3": "^7.9.0",
-    "next": "14.1.4",
+    "next": "14.2.18",
     "react": "^18",
     "react-bootstrap": "^2.10.5",
     "react-dom": "^18"
-  },
-  "devDependencies": {
-    "eslint": "^8",
-    "eslint-config-next": "14.1.4"
   }
 }
